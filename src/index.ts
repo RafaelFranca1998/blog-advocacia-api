@@ -55,6 +55,8 @@ app.use("/", (req, res) => {
   res.json({ message: 'Working Hard!' });
 });
 
+// tslint:disable-next-line: no-console
+console.log(process.env);
 
 // const server: http.Server = http.createServer(app)
 // server.listen(PORT, () => {
