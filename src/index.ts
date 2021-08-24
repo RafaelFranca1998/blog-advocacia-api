@@ -42,7 +42,7 @@ if (process.env.DEBUG) {
   // })
 } else {
   // tslint:disable-next-line: no-console
-  console.log('debug disabled');
+  logger.info('debug disabled');
 }
 /**
  * Rotas da Aplicação
@@ -56,7 +56,7 @@ app.use("/", (req, res) => {
 });
 
 // tslint:disable-next-line: no-console
-console.log(process.env);
+logger.info(process.env);
 
 // const server: http.Server = http.createServer(app)
 // server.listen(PORT, () => {
@@ -66,7 +66,7 @@ console.log(process.env);
 
 routes.forEach((route: RouteConfig) => {
   // tslint:disable-next-line: no-console
-  console.log(`Routes configured for ${route.getName()}`)
+  logger.info(`Routes configured for ${route.getName()}`)
 });
 /// Print API errors
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
