@@ -50,7 +50,8 @@ if (process.env.DEBUG) {
 routes.push(new UserRoutes(app))
 
 // define a route handler for the default home page
-app.get("/", (req, res) => {
+// app.use('/', UserRoutes)
+app.use("/", (req, res) => {
   res.json({ message: 'Working Hard!' });
 });
 
